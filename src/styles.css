@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+.sidebar {
+  
+  color: darkblue ; 
+  text-align: center;
+    width: 100px;
+    height: 100%;
+  }
+  
+  
+
+.footer{
+    font-family:alegreya-light;
+    font-size:13px;
+    color:silver;
+  }
+
+  .texto{
+    color: #fafafa ; 
+    text-align: center
+}
+
+header{
+    background:rgb(6, 2, 82);
+}
+.texto{
+    color: #fafafa ; 
+    text-align: center
+}
+.botton{
+  color: blue ; 
+
+}

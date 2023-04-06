@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark">
+    <div class="container-fluid">
+  
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <button>
+        <a class="dropdown-item" routerLink="/jefes/inicio">Salir</a>
+         </button>
+      
+    </div>
+  </nav>
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">JEFE DE DEPARTAMENTO</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        HOLA
+      </div>
+      <div class="dropdown mt-3">
+        
+        <button class="btn btn-primary " class="border border-primary" type="button" data-bs-toggle="dropdown">
+          
+          IR A
+          <a class="dropdown-item" routerLink="/jefes/listado"> <span>ALUMNOS</span></a>
+          <a class="dropdown-item" routerLink="/jefes/carreras">CARRERAS</a>
+         
+          <a class="dropdown-item" routerLink="/jefes/extraescolares">EXTRAESCOLARES</a>
+          <a class="dropdown-item" routerLink="/jefes/periodo">PERIODO</a>
+          <a class="dropdown-item" routerLink="/jefes/actividadescomplementarias">ACTIVIDADES COMPLEMENTARIAS</a>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  
+<div class="p-5 text-center">
+    <h4>INICIO JEFE DE DEPARTAMENTO</h4>
+    <P>HOLA</P>
+    <hr>
+    <button (click)="logout">SALIR</button>
+    <router-outlet></router-outlet>
+    <hr>
+</div>
+
+
+
+
+
+ 
