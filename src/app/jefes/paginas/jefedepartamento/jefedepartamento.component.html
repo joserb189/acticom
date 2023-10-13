@@ -1,6 +1,6 @@
 <div class="container">
     <div class="p-5 text-center">
-        <h4>Jefe de Departamento</h4>
+        <h4>JEFE DE DEPARTAMENTO</h4>
         <P></P>
     </div>
     <div class="main-content">
@@ -14,7 +14,7 @@
                                     <h3>Registros</h3>
                                 </div>
                                 <div class="col-2">
-                                    <h3><a routerLink="/jefes/agregar" class="btn btn-primary">Agregar</a></h3>                                        
+                                    <h3><a routerLink="/jefes/agregarjefe" class="btn btn-primary">Agregar</a></h3>                                        
                                 </div>
                             </div>
                         </div>
@@ -25,43 +25,28 @@
                                 <table class="table align-items-center table-flush">
                                   <thead class="thead-light">
                                     <tr>
-                                      <th scope="col">Alumno</th>
-                                      <th scope="col">Carrera</th>
-                                      <th scope="col">Semestre</th>
-                                      <th scope="col">Actividades realizadas</th>
-                                      <th scope="col">Totales</th>
+                                      <th scope="col">RFC</th>
+                                      <th scope="col">NOMBRE COMPLETO</th>
+                                      <th scope="col">CLAVE</th>
+                                      <th scope="col">FECHA DE INGRESO</th>
+                                      <th scope="col">FECHA TERMINADA</th>
+                                      <th scope="col">STATUS</th>
+                                      <th scope="col">DEPARTAMENTO</th>
+                                      <th scope="col">OPCIONES</th>
                                     </tr>
                                   </thead>
+
                                   <tbody>
-                                    <tr>
-                                      <th scope="row">
-                                        <div class="media align-items-center">
-                                          <a href="#" class="avatar rounded-circle mr-3">
-                                            <img style="width: 35px; margin-top: 5px;" src="assets/img/persona1.png">
-                                          </a>
-                                          <div class="media-body">
-                                            <span class="mb-0 text-sm">jose romero</span>
-                                          </div>
-                                        </div>
-                                      </th>
-                                      <td>
-                                    Tic's
-                                      </td>
-                                      <td>
-                                        <span class="badge badge-dot mr-4">
-                                          <i class="bg-warning">5</i> pending 
-                                        </span>
-                                      </td>
-                                      <td>
-                                        Rhythms Del Mundo
-                                    </td>
-                                    <td>
-                                        <span class="badge badge-dot mr-4">
-                                          <i class="bg-warning">5</i> pending 
-                                        </span>
-                                      </td>
-                
-                                    </tr>
+                                    <tr *ngFor="let jefedepartamento of jefedepartamento">
+                                      <td>{{jefedepartamento.rfc}}</td>
+                                      <td>{{jefedepartamento.nombre_completo}}</td>
+                                      <td>{{jefedepartamento.clave}}</td>
+                                      <td>{{jefedepartamento.fecha_ingreso}}</td>
+                                      <td>{{jefedepartamento.fecha_termina}}</td>
+                                      <td>{{jefedepartamento.status}}</td>
+                                      <td>{{jefedepartamento.departamento}}</td>
+                                      <th><h3><a [routerLink]="['/jefes/editarjefedep', jefedepartamento.rfc]" class="btn btn-warning">EDITAR</a></h3> </th>
+                                           </tr>
                                   
                                     <tr>
                                       

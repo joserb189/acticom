@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="p-5 text-center">
+
+        <h4 color="blue">CREAR JEFE</h4>
+
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row justify-content-between">
+
+                                <p class="card-text">Todos los registros son admitidos por el comite .</p>
+                            </div>
+                        </div>
+                        <!--cuerpo de Card-->
+                        <div class="card-body">
+
+
+
+                            <form #f="ngForm">
+
+                               
+
+                                <div class="mb-3">
+                                    <label for="rfc" class="form-label">RFC</label>
+                                    <input type="text" [(ngModel)]="Jefes.rfc" name="rfc" class="form-control" rfc="jefe"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="nombre"  class="form-label">NOMBRE</label>
+                                    <input type="text" [(ngModel)]="Jefes.nombre" name="nombre" class="form-control" rfc="nombre"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="apellidos" class="form-label">APELLIDOS</label>
+                                    <input type="text" [(ngModel)]="Jefes.apellidos" name="apellidos" class="form-control" rfc="apellidos"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="clave" class="form-label">CLAVE</label>
+                                    <input type="number" [(ngModel)]="Jefes.clave" name="clave" class="form-control" rfc="apellidos"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="fechadeingreso" class="form-label">FECHA DE INGRESO</label>
+                                    <input type="numbre" [(ngModel)]="Jefes.fecha_ingreso" name="fecha_ingreso" class="form-control" rfc="fecha_ingreso"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="fechatermina" class="form-label">FECHA TERMINA</label>
+                                    <input type="text" [(ngModel)]="Jefes.fecha_termina" name="fecha_termina" class="form-control" rfc="fecha_termina"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="status" class="form-label">STATUS</label>
+                                    <input type="number" [(ngModel)]="Jefes.status" name="status" class="form-control" rfc="status"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="periodo" class="form-label">DEPARTAMENTO</label>
+                                    <input type="text" class="form-control" [(ngModel)]="Jefes.departamento" name="departamento" rfc="departamento"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" (click)="agregar()" class="btn btn-primary">AGREGAR</button>
+                                <button type="button" [routerLink]="['/jefes/jefedepartamento']" name="cancelar" class="btn btn-light">CANCELAR</button>
+                               
+                            </form>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
+

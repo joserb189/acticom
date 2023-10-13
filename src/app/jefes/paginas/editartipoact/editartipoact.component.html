@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="p-5 text-center">
+
+        <h4 color="blue">EDITAR TIPO DE ACTIVIDAD</h4>
+
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row justify-content-between">
+
+                                <p class="card-text">Todos los registros son admitidos por el comite .</p>
+                            </div>
+                        </div>
+                        <!--cuerpo de Card-->
+                        <div class="card-body">
+
+
+
+                            <form #f="ngForm">
+
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">NOMBRE</label>
+                                    <input type="text" class="form-control" [(ngModel)]="tipoact.nombre" name="nombre" id="nombre"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="maximodecreditos" class="form-label">MAXIMO DE CREDITOS</label>
+                                    <input type="email" class="form-control" [(ngModel)]="tipoact.max_creditos" name="max_creditos" id="max_creditos"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                               
+
+                              
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button  (click)="guardar()" name="guardar" class="btn btn-primary">GUARDAR</button>
+                                <button (click)="eliminar()" name="eliminar" type="submit" class="btn btn-danger">ELIMINAR</button>
+                                <button type="button" [routerLink]="['/jefes/tipoactividad']" name="cancelar" class="btn btn-light">CANCELAR</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

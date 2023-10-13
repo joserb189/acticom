@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="p-5 text-center">
+
+        <h4 color="blue">EDITAR PERIODO</h4>
+
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row justify-content-between">
+
+                                <p class="card-text">Todos los registros son admitidos por el comite .</p>
+                            </div>
+                        </div>
+                        <!--cuerpo de Card-->
+                        <div class="card-body">
+
+
+
+                            <form #f="ngForm">
+
+                                <div class="mb-3">
+                                    <label for="mes_ini" class="form-label">MES INICIO</label>
+                                    <input type="text" class="form-control" [(ngModel)]="periodo.mes_ini" id="mes_ini"
+                                        name="mes_ini">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="mes_fin" class="form-label">MES FINAL</label>
+                                    <input type="text" class="form-control" [(ngModel)]="periodo.mes_fin" id="mes_fin"
+                                        name="mes_fin">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="año" class="form-label">AÑO</label>
+                                    <input type="number" class="form-control" [(ngModel)]="periodo.anio" id="anio"
+                                        name="anio">
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="status" class="form-label">STATUS</label>
+                                    <input type="number" class="form-control" [(ngModel)]="periodo.status" name="status"
+                                        id="status">
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button (click)="guardar()" class="btn btn-primary">GUARDAR</button>
+                                <button (click)="eliminar()" type="submit" class="btn btn-danger">ELIMINAR</button>
+                                <button type="button" [routerLink]="['/jefes/periodo']" name="canselar" class="btn btn-light">CANCELAR</button>
+                         
+                            </form>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

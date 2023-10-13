@@ -1,0 +1,43 @@
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+    <div class="row">
+       
+    </div>
+    
+    <div class="row">
+        <div class="p-5 text-center">
+            <h4>EDITAR EVIDENCIA</h4>
+        </div>            
+    </div>
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+        <form method="POST" action="" enctype="multipart/form-data">
+    
+            <input type="hidden" name="id" value="4">
+    
+            <div class="mb-3">
+                <label for="titulo" class="form-label">NOMBRE DE LA EVIDENCIA:</label>
+                <input type="text" class="form-control" name="nombre de la evidencia" id="nombredelaevidencia" value="nombre de la evidencia">               
+            </div>
+    
+            
+    
+            <div class="mb-3">
+                <label for="imagen" class="form-label">EVIDENCIA:</label>
+                <input type="file" class="form-control" name="imagen" id="imagen" placeholder="Selecciona una imagen">               
+            </div>
+            <div class="mb-3">
+                <label for="texto">DESCRIPCION DE LA EVIDENCIA</label>   
+                <textarea class="form-control" placeholder="Escriba el texto de su artículo" name="texto" style="height: 200px">
+               Descripcion
+                </textarea>              
+            </div>          
+        
+            <br />
+            <button type="submit" name="guardarevidencia" class="btn btn-success float-left"><i class="bi bi-person-bounding-box"></i> GUARDAR EVIDENCIA</button>
+    
+            <button type="submit" name="borrarArticulo" class="btn btn-danger float-right"><i class="bi bi-person-bounding-box"></i> BORRAR EVIDENCIA</button>
+            </form>
+        </div>
+    </div>
+</div>
+

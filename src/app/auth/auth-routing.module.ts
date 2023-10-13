@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './paginas/login/login.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
+import { LoginjefeComponent } from './paginas/loginjefe/loginjefe.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
 
@@ -21,6 +23,13 @@ const routes: Routes = [
         component: RegistroComponent
       },
 
+      {
+        path: 'loginjefe',
+        component: LoginjefeComponent
+      },
+
+    
+
       
       {
         path: '**',
@@ -33,10 +42,11 @@ const routes: Routes = [
 @NgModule({
   
   imports: [
-    RouterModule.forChild ( routes )
+    RouterModule.forChild ( routes ),
+    FormsModule
   ],
   exports: [
-    RouterModule
+    RouterModule,
   ]
 })
 export class AuthRoutingModule { }

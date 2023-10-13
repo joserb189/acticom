@@ -1,9 +1,8 @@
-
 <div class="container">
     <div class="p-5 text-center">
-      
-        <h4 color="blue">AGREGAR CARRERA</h4>
-        <P></P>
+
+        <h4 color="blue">CREAR CARRERA</h4>
+
     </div>
     <div class="main-content">
         <div class="container">
@@ -12,45 +11,53 @@
                     <div class="card shadow">
                         <div class="card-header border-0">
                             <div class="row justify-content-between">
-                                
+
                                 <p class="card-text">Todos los registros son admitidos por el comite .</p>
                             </div>
                         </div>
                         <!--cuerpo de Card-->
                         <div class="card-body">
-                           
-                            <div class="table-responsive">
 
-                                <form>
-                                    <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label">NONBRE DE LA CARRERA</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                      </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">JEFE DE CARRERA</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                         </div>
-                                         
-                                    
-                                    <div class="mb-3 form-check">
-                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Agregar</button>
-                                    <button type="submit" class="btn btn-danger">Cancelar</button>
-                                  </form>
+                            <form #f="ngForm">
+                               
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">NOMBRE</label>
+                                    <input  [(ngModel)]="carrera.nombre" name="nombre" id="nombre" class="form-control" 
+                                        aria-describedby="emailHelp">
+                                </div>
 
-                              </div>
+                                <div class="mb-3">
+                                    <label for="nombrecorto" class="form-label">NOMBRE CORTO</label>
+                                    <input [(ngModel)]="carrera.nombre_corto" name="nombre_corto" class="form-control" id="nombre_corto"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="jefedepartamento" class="form-label">JEFE DEPARTAMENTO</label>
+                                    <input [(ngModel)]="carrera.jdepto" name="jdepto" class="form-control" id="jdepto"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button (click)="agregar()" type="submit" name="agregar"  type="submit" class="btn btn-primary">AGREGAR</button>
+                                <button type="button" [routerLink]="['/jefes/carreras']" name="cancelar" class="btn btn-light">CANCELAR</button>
+                            
+                               </form>
+
                         </div>
-  
-                        
-                        
                     </div>
+
+
+
                 </div>
             </div>
         </div>
     </div>
+</div>
   
   
-  </div>
-

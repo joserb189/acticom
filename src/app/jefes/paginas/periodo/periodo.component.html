@@ -15,7 +15,7 @@
                                   <h5>Registro de periodos</h5>
                               </div>
                               <div class="col-2">
-                                  <h3><a routerLink="/jefes/agregarperiodo" class="btn btn-primary">Agregar Periodo</a></h3>                                        
+                                  <h3><a routerLink="/jefes/agregarperiodo" class="btn btn-primary">CREAR PERIODO</a></h3>                                        
                               </div>
                           </div>
                       </div>
@@ -27,122 +27,30 @@
 
                               <table class="table">
                                   <thead>
+                                    
                                     <tr>
                                       <th scope="col">ID</th>
                                       <th scope="col">PERIODO</th>
-                                      <th scope="col">AÑO</th>
-                                      <th scope="col">MES INICIO</th>
-                                      <th scope="col">MES FINAL</th>
+                                      <th scope="col">STATUS</th>
                                       <th scope="col">OPCIONES</th>
                                       
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <th scope="row">1</th>
-                                      <td>agosto-diciembre 2021</td>
-                                      <td>2021</td>
-                                      <td>Agosto</td>
-                                      <td>Diciembre</td>
-                                      <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                      <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                      
-                                    </tr>
-
-                                    <tr>
-                                      <th scope="row">2</th>
-                                      <td>Febrero-Junio 2022</td>
-                                      <td>2022</td>
-                                      <td>Febrero</td>
-                                      <td>Junio</td>
-                                      <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                      <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                      
-                                    </tr>
-
-                                    <tr>
-                                      <th scope="row">3</th>
-                                      <td>Agosto-Diciembre 2022</td>
-                                      <td>2021</td>
-                                      <td>Agosto</td>
-                                      <td>Diciembre</td>
-                                      <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                      <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                      
-                                    </tr>
-
-                                    <tr>
-                                      <th scope="row">4</th>
-                                      <td>Febrero-Junio 2023</td>
-                                      <td>2023</td>
-                                      <td>Febrero</td>
-                                      <td>Junio</td>
-                                      <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                      <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                      
-                                    </tr>
-                                   
+                                    <tr *ngFor="let periodo of periodos">
+                                      <td>{{ periodo.id }}</td>
+                                      <td>{{ periodo. periodo }}</td>
+                                      <td>{{ periodo.status }}</td>
+                                      <th><h3><a [routerLink]="['/jefes/editarperiodo',periodo.id]" class="btn btn-warning">EDITAR</a></h3> </th> 
+                                        
+                                    </tr> 
                                     
                                   </tbody>
                                 </table>
                               
 
                               <table class="table align-items-center table-flush">
-                                
-
-
-                                <!--
-                                  <tbody>
-                                  <tr>
-                                    <th scope="row">
-                                      <div class="media align-items-center">
-                                        <a href="#" class="avatar rounded-circle mr-3">
-                                          <img style="width: 35px; margin-top: 5px;" src="assets/img/persona1.png">
-                                        </a>
-                                        <div class="media-body">
-                                          <span class="mb-0 text-sm">jose romero</span>
-                                        </div>
-                                      </div>
-                                    </th>
-                                    <td>
-                                  Tic's
-                                    </td>
-                                    <td>
-                                      <span class="badge badge-dot mr-4">
-                                        <i class="bg-warning">5</i> pending 
-                                      </span>
-                                    </td>
-                                    <td>
-                                      Rhythms Del Mundo
-                                  </td>
-                                  <td>
-                                      <span class="badge badge-dot mr-4">
-                                        <i class="bg-warning">5</i> pending 
-                                      </span>
-                                    </td>
-              
-                                  </tr>
-                                
-                                  <tr>
-                                    
-                                    <td class="text-right">
-                                      <div class="dropdown">
-                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <i class="fas fa-ellipsis-v"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                          <a class="dropdown-item" href="#">Action</a>
-                                          <a class="dropdown-item" href="#">Another action</a>
-                                          <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                                -->
-
-
-                                
+                             
                               </table>
                             </div>
                       </div>

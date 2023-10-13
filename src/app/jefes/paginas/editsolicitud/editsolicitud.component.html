@@ -1,0 +1,94 @@
+<p>editarsolicitud works!</p>
+<div class="container">
+    <div class="p-5 text-center">
+
+        <h4 color="blue">EDITAR SOLICITUD</h4>
+
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row justify-content-between">
+
+                                <p class="card-text">Todos los registros son admitidos por el comite .</p>
+                            </div>
+                        </div>
+                        <!--cuerpo de Card-->
+                        <div class="card-body">
+
+
+
+                            <form #f="ngForm">
+                                
+                                <div class="mb-3">
+                                    <label for="status" class="form-label">STATUS</label>
+                                    <input type="boolean" class="form-control" [(ngModel)]="solicitudes.status" name="status" id="status"
+                                        aria-describedby="actividadgeneral">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="observacion" class="form-label">OBSERVACION</label>
+                                    <input type="text" class="form-control" [(ngModel)]="solicitudes.observacion" name="act_especifica" id="act_especifica"
+                                        aria-describedby="actividadespacifica">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="created_at" class="form-label">CREADO</label>
+                                    <input type="number" class="form-control" [(ngModel)]="solicitudes.created_at" name="created_at" id="created_at"
+                                        aria-describedby="descripcion">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="valornumerico" class="form-label">VALOR NUMERICO</label>
+                                    <input type="number" class="form-control" [(ngModel)]="solicitudes.valor_numerico"  name="valor_numerico" id="valor_numerico"
+                                        aria-describedby="tipo">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="periodo" class="form-label">PERIODO</label>
+                                    <input type="number" class="form-control" [(ngModel)]="solicitudes.periodo"  name="periodo" id="tipo"
+                                        aria-describedby="tipo">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="jefedepartamento" class="form-label">JEFE DEPARTAMENTO</label>
+                                    <input type="number" class="form-control" [(ngModel)]="solicitudes.jdepto" name="jdepto" id="jdepto"
+                                        aria-describedby="tipo">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="alumno" class="form-label">ALUMNO</label>
+                                    <input type="number" class="form-control" [(ngModel)]="solicitudes.alumno" name="alumno" id="alumno"
+                                        aria-describedby="tipo">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="act_complementaria" class="form-label">ACTIVIDAD COMPLEMENTARIA</label>
+                                    <input type="number" class="form-control" [(ngModel)]="solicitudes.act_complementaria"  name="act_complementaria" id="act_complementaria"
+                                        aria-describedby="tipo">
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="button"  name="guardar" type="submit" class="btn btn-primary">GUARDAR</button>
+                                <button  name="eliminar" class="btn btn-danger">ELIMINAR</button>
+                                <button type="button" name="cancelar" class="btn btn-light">CANCELAR</button>
+                            
+                                   
+                            </form>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

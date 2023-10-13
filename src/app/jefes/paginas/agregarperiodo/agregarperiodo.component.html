@@ -1,9 +1,8 @@
-
 <div class="container">
     <div class="p-5 text-center">
-      
-        <h4 color="blue">AGREGAR PERIODO</h4>
-        <P></P>
+
+        <h4 color="blue">CREAR PERIODO</h4>
+
     </div>
     <div class="main-content">
         <div class="container">
@@ -12,52 +11,60 @@
                     <div class="card shadow">
                         <div class="card-header border-0">
                             <div class="row justify-content-between">
+
                                 <p class="card-text">Todos los registros son admitidos por el comite .</p>
-                           
-                                
                             </div>
                         </div>
                         <!--cuerpo de Card-->
                         <div class="card-body">
-                            <div class="table-responsive">
 
-                                <form>
-                                    <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label">PERIODO</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                      </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">AÑO</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                         </div>
-                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">MES INICIO</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                              </div>
 
-                                              <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">MES FINAL</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                  </div>
 
-                                    <div class="mb-3 form-check">
-                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Agregar</button>
-                                    <button type="submit" class="btn btn-danger">Cancelar</button>
-                                  </form>
+                            <form #f="ngForm"> 
 
-                              </div>
+                                <div class="mb-3">
+                                    <label for="mesinicio" class="form-label">MES INICIO</label>
+                                    <input  [(ngModel)]="periodo.mes_ini" name="mesinicio" class="form-control" id="mesinicio"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="mesfin" class="form-label">MES FIN</label>
+                                    <input type="text" [(ngModel)]="periodo.mes_fin" name="mesfin" class="form-control" id="mesfin"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="año" class="form-label">AÑO</label>
+                                    <input type="number" [(ngModel)]="periodo.anio" name="año" class="form-control" id="anio"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="status" class="form-label">STATUS</label>
+                                    <input type="number" [(ngModel)]="periodo.status" name="status" class="form-control" id="status"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" (click)="agregar()" name="agregar" class="btn btn-primary">AGREGAR</button>
+                                <button type="button" [routerLink]="['/jefes/periodo']" name="canselar" class="btn btn-light">CANCELAR</button>
+                                </form>
+
                         </div>
-  
-                        
-                        
                     </div>
+
+
+
                 </div>
             </div>
         </div>
     </div>
-  
+</div>
   
   

@@ -15,7 +15,7 @@
                                     <h6>Actividades Complementarias</h6>
                                 </div>
                                 <div class="col-2">
-                                    <h3><a routerLink="/jefes/agregar" class="btn btn-primary">Agregar</a></h3>                                        
+                                    <h3><a routerLink="/jefes/agregaractividades" class="btn btn-primary">CREAR ACTIVIDAD</a></h3>                                        
                                 </div>
                             </div>
                         </div>
@@ -29,60 +29,35 @@
                                     <thead>
                                       <tr>
                                         <th scope="col">ID</th>
-                                        <th scope="col">ACTIVIDAD ESPECIFICA</th>
                                         <th scope="col">ACTIVIDAD GENERAL</th>
-                                        <th scope="col">LUGAR</th>
-                                        <th scope="col">TIEMPO</th>
+                                        <th scope="col">ACTIVIDAD ESPECIFICA</th>
                                         <th scope="col">CREDITO</th>
-                                        <th scope="col">DESCRIPCION</th>
+                                        <th scope="col">LUGAR</th>
                                         <th scope="col">NUMERO DE PARTICIPANTES</th>
+                                        <th scope="col">TIEMPO</th>
+                                        <th scope="col">DESCRIPCION</th>
+                                        <th scope="col">TIPO</th>
                                         <th scope="col">OPCIONES</th>
                                         
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <th scope="row">1</th>
-                                        <td>MOOC</td>
-                                        <td>ADMINISTRACION</td>
-                                        <td>EN LINEA</td>
-                                        <td>4 MESES</td>
-                                        <td>2</td>
-                                        <td>ADMINISTRACION</td>
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
+                                      <tr *ngFor="let actcomplementaria of actcomplementarias">
+                                        <td>{{actcomplementaria.id}}</td>
+                                        <td>{{actcomplementaria.act_gnral}}</td>
+                                        <td>{{actcomplementaria.act_especifica}}</td>
+                                        <td>{{actcomplementaria.credito}}</td>
+                                        <td>{{actcomplementaria.lugar}}</td>
+                                        <td>{{actcomplementaria.num_participantes}}</td>
+                                        <td>{{actcomplementaria.tiempo}}</td>
+                                        <td>{{actcomplementaria.descripcion}}</td>
+                                        <td>{{actcomplementaria.tipo}}</td>
                                         
-                                      </tr>
-
-                                      <tr>
-                                        <th scope="row">2</th>
-                                        <td>MOOC</td>
-                                        <td>ADMINISTRACION</td>
-                                        <td>EN LINEA</td>
-                                        <td>4 MESES</td>
-                                        <td>2</td>
-                                        <td>ADMINISTRACION</td>
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                        
-                                      </tr>
-
-                                      <tr>
-                                        <th scope="row">3</th>
-                                        <td>MOOC</td>
-                                        <td>ADMINISTRACION</td>
-                                        <td>EN LINEA</td>
-                                        <td>4 MESES</td>
-                                        <td>2</td>
-                                        <td>ADMINISTRACION</td>
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                        
-                                      </tr>
+                                        <th><h3><a [routerLink]="['/jefes/editarcomplementaria', actcomplementaria.id]"  class="btn btn-warning">EDITAR</a></h3> </th> 
                                       
+                                         <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
+                                        
+                                      </tr>
                                     </tbody>
                                   </table>
                                 

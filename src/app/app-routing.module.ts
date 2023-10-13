@@ -8,6 +8,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { UsuarioComponent } from './usuarios/paginas/usuario/usuario.component';
+import { LoginjefeComponent } from './auth/paginas/loginjefe/loginjefe.component';
+import { RejefeComponent } from './jefes/paginas/rejefe/rejefe.component';
 
 const routes: Routes = [
 
@@ -61,6 +63,16 @@ const routes: Routes = [
   {
     path: 'registro',
     component: RegistroComponent
+  },
+
+  {
+    path: 'loginjefe',
+    component: LoginjefeComponent
+  },
+
+  {
+    path: 'rejefe',
+    component: RejefeComponent
   },
   
   {

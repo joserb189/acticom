@@ -1,8 +1,8 @@
 <div class="container">
     <div class="p-5 text-center">
-      
+
         <h4 color="blue">EDITAR ALUMNO</h4>
-        
+
     </div>
     <div class="main-content">
         <div class="container">
@@ -11,54 +11,66 @@
                     <div class="card shadow">
                         <div class="card-header border-0">
                             <div class="row justify-content-between">
-                                
+
                                 <p class="card-text">Todos los registros son admitidos por el comite .</p>
                             </div>
                         </div>
                         <!--cuerpo de Card-->
                         <div class="card-body">
-                            
-                            <div class="table-responsive">
 
-                                <form>
-                                    <div class="mb-3">
-                                      <label for="exampleInputEmail1" class="form-label">NUMERO DE CONTROL</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                      </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">PERIODO</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                         </div>
-                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">MES INICIO</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                              </div>
-                                              <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">MES FINAL</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                  </div>
-                                    
-                                    <div class="mb-3 form-check">
-                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            <form #f="ngForm">
+                                <div class="mb-3">
+                                    <label for="numerocontrol" class="form-label">NUMERO DE CONTROL</label>
+                                    <input type="number" class="form-control" [(ngModel)]="alumno.no_control" id="no_control"
+                                    name="no_control"
+                                        >
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">NOMBRE</label>
+                                    <input type="text" class="form-control" [(ngModel)]="alumno.nombre"  name="nombre" id="nombrecompleto" aria-describedby="nombre">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="apellidopaterno" class="form-label">APELLIDO PATERNO</label>
+                                    <input type="text" class="form-control" [(ngModel)]="alumno.a_paterno" name="a_paterno" id="a_paterno" aria-describedby="apellidopaterno">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="apellidomaterno" class="form-label">APELLIDO MATERNO</label>
+                                    <input type="text" class="form-control" [(ngModel)]="alumno.a_materno" name="a_materno" id="a_materno" aria-describedby="apellidomaterno">
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="Numerodecontrol" class="form-label">NIP</label>
+                                    <input type="number" class="form-control" [(ngModel)]="alumno.nip" id="nip" name="nip" aria-describedby="nip">
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
-                                    <button type="submit" class="btn btn-danger">Cancelar</button>
-                                  </form>
+                                
+                                <div class="mb-3">
+                                    <label for="carrera" class="form-label">CARRERA</label>
+                                    <input type="number" class="form-control" [(ngModel)]="alumno.carrera" id="carrera" name="carrera"
+                                        aria-describedby="carrera">
+                                </div>
+                               
 
-                              </div>
+                               
+                                <button (click)="guardar()" name="guardar" class="btn btn-primary">Guardar</button>
+                                <button  (click)="eliminar()" name="eliminar" class="btn btn-danger">ELIMINAR</button>
+                                <button type="button" [routerLink]="['/jefes/alumnos']" name="canselar" class="btn btn-light">CANCELAR</button>
+                            </form>
+
                         </div>
-  
-                        
-                        
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
-  
-  
-  </div>
+</div>
+
+
+
 
 <!--
     <form>
@@ -122,6 +134,3 @@
     </div>
 </div>
 -->
-
-
-

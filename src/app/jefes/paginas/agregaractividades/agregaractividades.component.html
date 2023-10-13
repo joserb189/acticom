@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="p-5 text-center">
+
+        <h4 color="blue">CREAR ACTIVIDADES COMPLEMENTARIAS</h4>
+
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row justify-content-between">
+
+                                <p class="card-text">Todos los registros son admitidos por el comite .</p>
+                            </div>
+                        </div>
+                        <!--cuerpo de Card-->
+                        <div class="card-body">
+
+
+
+                            <form #f="ngForm">
+
+                                <div class="mb-3">
+                                    <label for="actividadgeneral" class="form-label">ACTIVIDAD GENERAL</label>
+                                    <input class="form-control" [(ngModel)]="acticomplementaria.act_gnral" name="act_gnral" id="act_gnral" class="form-control" 
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="actividadespecifica" class="form-label">ACTIVIDAD ESPECIFICA</label>
+                                    <input type="text" class="form-control" [(ngModel)]="acticomplementaria.act_especifica"  name="act_especifica" id="act_especifica"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="credito" class="form-label">CREDITO</label>
+                                    <input type="number" class="form-control" [(ngModel)]="acticomplementaria.credito" name="credito" id="credito"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="lugar" class="form-label">LUGAR</label>
+                                    <input type="text" class="form-control" [(ngModel)]="acticomplementaria.lugar" name="lugar" id="lugar"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="numerodeparticipantes" class="form-label">NUMERO DE PARTICIPANTES</label>
+                                    <input type="numer" class="form-control" [(ngModel)]="acticomplementaria.num_participantes" name="num_participantes" id="num_participantes"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="tiempo" class="form-label">TIEMPO</label>
+                                    <input type="text" class="form-control" [(ngModel)]="acticomplementaria.tiempo" name="tiempo" id="tiempo"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">DESCRIPCION</label>
+                                    <input type="text" class="form-control" [(ngModel)]="acticomplementaria.descripcion" name="descripcioin" id="descripcion"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="tipo" class="form-label">TIPO</label>
+                                    <input type="number" class="form-control" [(ngModel)]="acticomplementaria.tipo"  name="tipo" id="tipo"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button  (click)="agregar()" name="agregar" type="submit" class="btn btn-primary">AGREGAR</button>
+                                <button type="button" [routerLink]="['/jefes/actividadescomplementarias']" name="canselar" class="btn btn-light">CANCELAR</button>
+                            
+                            </form>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="p-5 text-center">
+
+        <h4 color="blue">AGREGAR ALUMNO</h4>
+
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row justify-content-between">
+
+                                <p class="card-text">Todos los registros son admitidos por el comite .</p>
+                            </div>
+                        </div>
+                        <!--cuerpo de Card-->
+                        <div class="card-body">
+
+
+
+                            <form #f="ngForm">
+
+                                <div class="mb-3">
+                                    <label for="numerodecontrol" class="form-label">NUMERO DE CONTROL</label>
+                                    <input type="number" [(ngModel)]="alumnos.no_control" name="no_control" class="form-control" id="no_control"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                               
+
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">NOMBRE</label>
+                                    <input type="text" [(ngModel)]="alumnos.nombre" class="form-control" id="nombre" name="nombre"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="apellidopaterno" class="form-label">APELLIDO PATERNO</label>
+                                    <input type="text" [(ngModel)]="alumnos.a_paterno" name="a_paterno" class="form-control" id="a_paterno"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="apellidomaterno" class="form-label">APELLIDO MATERNO</label>
+                                    <input type="text" [(ngModel)]="alumnos.a_materno" name="a_materno" class="form-control" id="a_matermo"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="nip" class="form-label">NIP</label>
+                                    <input type="number" [(ngModel)]="alumnos.nip" name="nip" class="form-control" id="nip"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="carrera" class="form-label">CARRERA</label>
+                                    <input type="number" [(ngModel)]="alumnos.carrera" name="carrera" class="form-control" id="carrera"
+                                        aria-describedby="emailHelp">
+                                </div>
+
+                                
+
+                                
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" (click)="agregar()" class="btn btn-primary">AGREGAR</button>
+                                <button type="button" [routerLink]="['/jefes/alumnos']" name="cancelar" class="btn btn-light">CANCELAR</button>
+                            
+                               </form>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  

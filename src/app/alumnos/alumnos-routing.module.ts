@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { ActividadcomplementariaComponent } from './paginas/actividadcomplementaria/actividadcomplementaria.component';
 import { InicioalumnoComponent } from './paginas/inicioalumno/inicioalumno.component';
-import { EvidenciapresencialComponent } from './paginas/evidenciapresencial/evidenciapresencial.component';
 import { TipoactividadComponent } from './paginas/tipoactividad/tipoactividad.component';
-import { EvidenciasenviadasComponent } from './paginas/evidenciasenviadas/evidenciasenviadas.component';
 import { CarreraComponent } from './paginas/carrera/carrera.component';
 import { EnvioevidenciasComponent } from './paginas/envioevidencias/envioevidencias.component';
 import { MenuactividadesComponent } from './paginas/menuactividades/menuactividades.component';
+import { EditarevidenciasComponent } from './paginas/editarevidencias/editarevidencias.component';
+import { EvidenciapresentarComponent } from './paginas/evidenciapresentar/evidenciapresentar.component';
 
 const routes: Routes = [
 
@@ -23,17 +23,13 @@ const routes: Routes = [
         path: 'actividadcomplementaria', component: ActividadcomplementariaComponent
       },
 
-      {
-        path: 'evidenciapresencial', component: EvidenciapresencialComponent
-      },
+      
 
       {
         path: 'menuactividades', component: MenuactividadesComponent
       },
 
-      {
-        path: 'evidenciasenviadas', component: EvidenciasenviadasComponent
-      },
+      
 
       {
         path: 'carrera', component: CarreraComponent
@@ -47,9 +43,19 @@ const routes: Routes = [
         path: 'envioevidencias', component: EnvioevidenciasComponent
       },
 
+      {
+        path: 'editarevidencias', component: EditarevidenciasComponent
+      },
+
+      {
+        path: 'evidenciapresentar', component: EvidenciapresentarComponent
+      },
+
+
       
+
+
       
-     
       {
         path: '**',
          redirectTo: 'menuactividades'

@@ -29,136 +29,29 @@
                                     <thead>
                                       <tr>
                                         <th scope="col">ID</th>
-                                        <th scope="col">CARRERAS</th>
-                                        <th scope="col">NUMERO DE ALUMNOS</th>
-                                        <th scope="col"></th>
+                                        <th scope="col">NOMBRE</th>
+                                        <th scope="col">NOMBRE CORTO</th>
+                                        <th scope="col">JEFE</th>
                                         <th scope="col">OPCIONES</th>
                                         
                                       </tr>
                                     </thead>
+
                                     <tbody>
-                                      <tr>
-                                        <th scope="row">1</th>
-                                        <td>Lic. en administracion</td>
-                                        <td>50</td>
-                                        
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                        
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">2</th>
-                                        <td>Ing. en Tic´s</td>
-                                      
-                                        
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                        
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">3</th>
-                                        <td colspan="1">Ing. en Electronica</td>
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                        
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">4</th>       
-                                        <td>Ing. en Acuicultura</td>
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                        
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">5</th>
-                                        <td>Ing. en Gestion Empresarial</td>
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                        
-                                      </tr>
+                                      <tr *ngFor="let carrera of carreras">
+                                        <td>{{ carrera.id }}</td>
+                                        <td>{{ carrera.nombre }}</td>
+                                        <td>{{ carrera.nombre_corto }}</td>
+                                        <td>{{ carrera.jefe }}</td>
 
-                                      <tr>
-                                        <th scope="row">6</th>
-                                        <td>Ing. en Mecanica</td>
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
-                                        
-                                      </tr>
-
-                                      <tr>
-                                        <th scope="row">7</th>
-                                        <td>Ing. en Quimica</td>
-                                        <td>50</td>
-                                        <th><h3><a href="#" class="btn btn-warning">EDITAR</a></h3> </th>
-                                        <th><h3><a href="#" class="btn btn-danger">ELIMINAR</a></h3> </th>
+                                        <th><h3><a [routerLink]="['/jefes/editarcarrera', carrera.id]" class="btn btn-warning">EDITAR</a></h3> </th> 
                                         
                                       </tr>
                                     </tbody>
                                   </table>
                                 
 
-                                <table class="table align-items-center table-flush">
-                                  
-
-
-                                  <!--
-                                    <tbody>
-                                    <tr>
-                                      <th scope="row">
-                                        <div class="media align-items-center">
-                                          <a href="#" class="avatar rounded-circle mr-3">
-                                            <img style="width: 35px; margin-top: 5px;" src="assets/img/persona1.png">
-                                          </a>
-                                          <div class="media-body">
-                                            <span class="mb-0 text-sm">jose romero</span>
-                                          </div>
-                                        </div>
-                                      </th>
-                                      <td>
-                                    Tic's
-                                      </td>
-                                      <td>
-                                        <span class="badge badge-dot mr-4">
-                                          <i class="bg-warning">5</i> pending 
-                                        </span>
-                                      </td>
-                                      <td>
-                                        Rhythms Del Mundo
-                                    </td>
-                                    <td>
-                                        <span class="badge badge-dot mr-4">
-                                          <i class="bg-warning">5</i> pending 
-                                        </span>
-                                      </td>
-                
-                                    </tr>
-                                  
-                                    <tr>
-                                      
-                                      <td class="text-right">
-                                        <div class="dropdown">
-                                          <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                          </a>
-                                          <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                          </div>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                  -->
-
-
-                                  
-                                </table>
+        
                               </div>
                         </div>
 
